@@ -1,0 +1,373 @@
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-container {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+
+.nav-container>.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo>.fa-solid {
+    color: rgb(255, 72, 0);
+    font-size: 2rem;
+}
+
+.logo>p {
+    font-size: 1.7rem;
+    font-weight: bolder;
+}
+
+.logo>p>span {
+    color: rgb(255, 72, 0);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.navbar>li {
+    list-style: none;
+}
+
+.navbar>li>a {
+    text-decoration: none;
+    padding: 40px 16px;
+    color: black;
+    font-weight: bolder;
+}
+
+
+.navbar>li>a:hover {
+    border-bottom: 3px solid rgb(255, 72, 0);
+}
+
+.burger {
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+    .burger {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin-left: 20px;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+    }
+}
+
+
+.banner {
+    background-image: url(/asset/hero.jpg.webp);
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.banner>.overley {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 17, 17, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.overley>.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.overley>.box>h1 {
+    color: white;
+    font-size: 5rem;
+}
+
+.overley>.box>h3 {
+    font-size: 2rem;
+    color: white;
+}
+
+.overley>.box>p {
+    width: 650px;
+    color: whitesmoke;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+.btn {
+    margin: 20px 0px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn>button:nth-child(1) {
+    padding: 15px 35px;
+    text-align: center;
+    background-color: rgb(255, 72, 0);
+    color: white;
+    border: 2px solid rgb(255, 72, 0);
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn>button:nth-child(2) {
+    padding: 15px 35px;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgb(255, 72, 0);
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.btn>button:nth-child(2):hover {
+    background-color: rgb(255, 72, 0);
+}
+
+
+.overley>.box>.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: rgb(255, 72, 0);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overley>.box>.circle>.fa-solid {
+    position: relative;
+}
+
+.overley>.box>.circle:hover {
+    background-color: transparent;
+    border: 2px solid rgb(255, 72, 0);
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+    .banner {
+        height: fit-content;
+    }
+
+    .banner>.overley {
+        flex-direction: column;
+    }
+
+    .banner>.overley>.box {
+        width: 96%;
+    }
+
+    .banner>.overley>.box>p {
+        width: 100%;
+    }
+
+    .banner>.overley>.box:nth-child(2) {
+        display: none;
+    }
+}
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards>.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(236, 242, 245);
+    border-radius: 20px;
+    margin: 200px 15px;
+    height: 300px;
+    width: 350px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cards>.box:hover {
+    background-color: rgb(255, 72, 0);
+}
+
+.cards>.box>.fa-solid {
+    font-size: 50px;
+    color: gray;
+}
+
+.cards>.box:hover>.fa-solid {
+    color: white;
+}
+
+.cards>.box:hover>h2 {
+    color: white;
+}
+
+.cards>.box:hover>p {
+    color: white;
+}
+
+
+.cards>.box>h2 {
+    color: black;
+}
+
+.cards>.box>p {
+    line-height: 27px;
+    color: gray;
+    font-size: 18px;
+}
+
+.cards>.box:nth-child(1) {
+    background-color: rgb(255, 72, 0);
+}
+
+.cards>.box:nth-child(1)>.fa-regular {
+    color: white;
+    font-size: 50px;
+}
+
+.cards>.box:nth-child(1)>h2 {
+    color: white;
+}
+
+.cards>.box:nth-child(1)>p {
+    line-height: 30px;
+    color: white;
+}
+
+@media screen and (max-width:650px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    .cards>.box {
+        width: 97%;
+        margin: 15px;
+    }
+}
+
+.charity {
+    width: 100%;
+    background-image: url(/asset/hero.jpg.webp);
+}
+
+.charity > .overley {
+    background-color: rgba(9, 9, 9, 0.9);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.charity > .overley > .boxs {
+    width: 40%;
+    height: 400px;
+    margin: 100px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.charity > .overley > .boxs > h1 {
+    color: white;
+    font-size: 2rem;
+}
+
+.charity > .overley > .boxs > .line {
+    width: 100px;
+    height: 3px;
+    background-color: rgb(255, 72, 0);
+}
+
+.charity > .overley > .boxs > p {
+    color: lightgray;
+    line-height: 25px;
+    margin: 15px 0px;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.charity > .overley > .boxs > button {
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    background-color: rgb(255, 72, 0);
+    color: white;
+    border: 2px solid rgb(255, 72, 0);
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+
+
+.charity > .overley > .boxs:nth-child(2) {
+    background-image: url(/asset/welcome.jpg\ \(1\).webp);
+    width: 40%;
+    height: 400px;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (max-width:768px) {
+    .charity > .overley {
+        flex-direction: column;
+    }
+    .charity > .overley > .boxs {
+        width: 97%;
+        margin: 15px 0px;
+    }
+
+    .charity > .overley > .boxs:nth-child(2) {
+        width: 97%;
+        background-color: pink;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
