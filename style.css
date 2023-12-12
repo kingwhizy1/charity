@@ -187,6 +187,8 @@ html {
 @media screen and (max-width:768px) {
     .banner {
         height: fit-content;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
     .banner>.overley {
